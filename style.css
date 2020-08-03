@@ -9,21 +9,65 @@ body{
 }
 nav{
     background-color: blue;
+    position: relative;
+    text-align: right;
+    top:0px;
+    width:100%;
+    align-items: center;
+    line-height: 60px;
+    height:70px;
+    background-color: rgb(98, 109, 206);;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    z-index: 1;
    
 }
-nav li{
+nav {
     display: inline-block;
     list-style-type: none;
-    padding: 15px;
-    font-size: 20px;
-    
+    padding: px;
+    font-size: 20px; 
 }
+
+.menu a{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
+    padding:20px;
+    color: #fff;
+    margin: 0 10px;
+    line-height: 70px;
+    transition: 0.5s ease-in;
+
+}
+ 
+  label{
+      margin: 0 40px 0 0;
+      font-size: 25px;
+      line-height: 60px;
+      color: #000;
+      display: none;
+      
+  }
+
+  #toggle{
+      display:none ;
+      margin: 0px;
+  }
+
+.active{
+    font-weight: bold;
+    color: #2d2a2a;
+} 
+.menu a:hover{
+            
+     color:#000;
+ }
+
 /* the front view for the sliding images*/
 .container{
     
     width: 100%;
     height: 400px;
-    background-color: yellow;
        
 }
 .container3{
@@ -361,13 +405,50 @@ input{
 
 
 @media screen and (max-width:600px){
-    .maindiv h2{
-         width: 100%;
-        font-size: 30px;
-        text-align: center;
-        color: rgb(71, 21, 65);
-        
+    label{
+        display: block;
+        cursor: pointer;
+        float: right;
+        line-height: 70px;
+       
     }
+    label:hover{
+        color:#fff;
+    }
+    #toggle{
+        display: none;
+    }
+    .menu {
+        text-align: center;
+        width: 90%;
+        height: 100%;
+        display: none;
+        box-sizing: border-box;   
+    }
+    .maindiv h2{
+        font-size: 18px;
+        width: 100%;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+    }
+     .menu a{
+         clear: right;
+        display: block;
+        border: 1px solid rgb(44, 1, 44);
+        background-color: #000;  
+    
+     }
+     .menu a:hover{
+        color:rgb(22, 25, 216);
+     }
+
+     #toggle:checked + .menu{
+         display: block;
+     }
+   
+ 
+    
     .newtop{
         display:grid;
         grid-template-columns: auto;
@@ -409,21 +490,48 @@ input{
     }
     .all{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .logo{
+        margin: -10px;
     }
 
     .footer-contact{
-        margin-left: 50px;
+        margin-left: 0px;
+    }
+    .footer .icon{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+    .footer span{
+        line-height: 60px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .footer .icon i{
+        font-size: 20px;
+       margin: 0 5px;
+    }
+    .footer .social:hover{
+        width: 150px;
+    }
+
+    label .foorm{
+        color: orange;
     }
     #min{
         margin-left: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     #password{
-        margin-left: 40px;
+        margin-left: 0px;
+
     }
     .footer-bottom{
-        width:95%;/*something is wrong here*/
+        width:70%;/*something is wrong here*/
     }
 }
 
