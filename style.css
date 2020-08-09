@@ -8,7 +8,6 @@ body,html{
     padding: 0px;    
 }
 nav{
-    background-color: blue;
     position: relative;
     text-align: right;
     top:0px;
@@ -33,7 +32,7 @@ nav {
     text-decoration: none;
     display: inline;
     padding:20px;
-    color: rgb(114, 114, 117);
+    color: #fff;
     margin: 0 10px;
     line-height: 70px;
     transition: 0.5s ease-in;
@@ -67,9 +66,9 @@ nav {
 /* the front view for the sliding images*/
 .container{
     
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background-color: black;
        
 }
 .container3{
@@ -78,11 +77,13 @@ nav {
 .container3 h2{
     justify-content: center;
     text-align: center;
+    font-size: 35px;
 }
 
 .maindiv{
-    width: 100%;
-    height:400px;
+    width: 80%;
+    height:450px;
+    margin: 0 auto;
     background-image: url(images/1.jpg);
     background-size: 100% 100%;
     background-size: cover;
@@ -112,6 +113,7 @@ nav {
 .swiper-container {
     width: 100%;
     height: 100%;
+    margin-top: -10px;
   }
 
   .swiper-slide {
@@ -157,7 +159,7 @@ nav {
  }
 
 .time{
-    color: orangered;
+    color: #fff;
     position: absolute;
     font-size: 18px;
     top: 0px;
@@ -223,8 +225,11 @@ nav {
 
 .showcase{
     margin-top: 20px;
-    width:100%;
+    width:80%;
+    margin: 0 auto;
     position: relative;
+    margin-top: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     background-color: orchid;
@@ -244,9 +249,9 @@ nav {
 
 }
 .features img{
-    width: 100%;
+    width: 50%;
     justify-content: center;
-    margin: 100px 0px;
+    margin: 100px 100px;
 
 }
 
@@ -255,10 +260,12 @@ nav {
     float: right;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+    line-height: 30px;
     padding: 100px;
     letter-spacing: 1px;
-    font-size: 16px;
-    color: #fff;
+    font-size: 20px;
+    color: #000;
 }
 
 /*showing for newtop*/
@@ -289,7 +296,7 @@ nav {
     margin-top: 20px;
     padding-top: 50px;
     width: 100%;
-    position: ;
+    height:300px ;
     display: grid;
     color: yellow;
     background-color: #000;
@@ -297,7 +304,7 @@ nav {
 }
 
 .footer-contact{
-    margin-top: 40px;
+    margin-top: 0px;
     color: #fff;
     height: 100%;
     width: 100%;
@@ -364,6 +371,8 @@ nav {
     margin-right: 100px;
 }
 .footer-form{
+    display: flex;
+    flex-direction: column;
     padding: 4px;
 }
 
@@ -390,7 +399,7 @@ nav {
     
 }
 .footer-home p:nth-child(3){
-color: pink;
+color: #fff;
 margin-top: 20px;
 font-size: 18px;
 }
@@ -402,11 +411,12 @@ input{
 }
 .sign{
     width:100px;
-    position: absolute;
-    bottom: 0;
-    margin-left: px;
+    position: relative;
+    flex-direction: column;
     margin-top: 30px;
-    display: none;
+    background-color:#603f83ff ;
+    color: #fff;
+    font-size: 18px;
 
 }
 
@@ -414,15 +424,25 @@ input{
 .footer-bottom{
     color:white;
     background-color:rgb(27, 26, 26);
-    width:10%;/*something is wrong here*/
+    width:300%;/*something is wrong here*/
     height: 40px;
     padding-top: 10px;
-    line-height: 15px;
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
     text-align: center;
+    margin-top: 100px;
+
 }
 
 
 @media screen and (max-width:600px){
+    .container{
+    
+        
+        height: 350px;
+    }
+
     label{
         display: block;
         cursor: pointer;
@@ -444,7 +464,7 @@ input{
         box-sizing: border-box;   
     }
     .maindiv{
-        width: 100%;
+        width: 90%;
         height:300px;
     }
     .maindiv h2{
@@ -455,7 +475,15 @@ input{
         text-align: center;
     }
     .container3{
-        margin-top: 50px;
+        margin-top: 40px;
+    
+    }
+    
+    .container3 h2{
+        font-size: 25px;
+    }
+    .slider-box{
+        margin-top: 30px;
     }
      .menu a{
          clear: right;
@@ -471,31 +499,43 @@ input{
      #toggle:checked + .menu{
          display: block;
      }
-   
- 
-    
-    
-    .showcase{
+     .showcase{ 
         margin-top: 20px;
         width:100%;
         position: relative;
-        display: flex;
-        flex-direction: row;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: ;
         background-color: orchid;
+        display: none;
     }
+    
     .features {
         background-color: transparent;
-    
+    }
+    .features img{
+        width: 300px;
     }
     
     .description{
-        width: 50%;
-        float: right;
-        margin-top: 20px;
-        padding: 20px;
-        letter-spacing: 1px;
-        font-size: 16px;
+        width: 500px;
+        margin-left: -80px;
+        margin-top: -190px;
+        position: relative;
+        flex-direction: column;
+       
+        font-size: 18px;
         color: #000;
+    }
+
+    .description::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-left: 50px;
     }
 
     .newtop{
@@ -613,11 +653,11 @@ input{
     }
     .footer-home{
         margin-top: 20px;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .footer-form{
-        margin-top: 40px;
-        margin-left: 10px;
+        margin-top: 20px;
+        margin-left: 5px;
     }
     .footer-bottom{
         margin-top: 100px;
