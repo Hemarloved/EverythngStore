@@ -82,7 +82,7 @@ nav {
 }
 
 .maindiv{
-    width: 80%;
+    width: 100%;
     height:450px;
     margin: 0 auto;
     background-image: url(images/1.jpg);
@@ -99,9 +99,13 @@ nav {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);  
-    color: white;
+    color: rgb(175, 13, 67);
+    font-size: 25px;
+   
+}
+.maindiv h2 span{
+    color:#fff;
     font-size: 30px;
-    
 }
 @keyframes slider {
     0%{background-image: url('images/1.jpg');background-size: 100% 100%;}
@@ -327,7 +331,7 @@ nav {
     box-shadow: 0 5px 3px 4px rgba(0,0,0,0.5);
     border: none;
     margin: 10px; 
-    color:#000;
+    color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,18 +353,19 @@ nav {
     transform: scale(1.3);
     color:#fff;
 }
-.social-media a:nth-child(1):hover{
+.social-media a:nth-child(1){
     background-color:#dd4b39;
     }
    
 .social-media a:nth-child(2):hover{
-background-color:black;
+background-color:#000;
+color:#fff;
 }
-.social-media a:nth-child(3):hover{
+.social-media a:nth-child(3){
     background-color:#55acee;
     }
 
-.social-media a:nth-child(4):hover{
+.social-media a:nth-child(4){
 background-color:#25D366;
 }
 
@@ -558,7 +563,7 @@ input{
         box-sizing: border-box;   
     }
     .maindiv{
-        width: 90%;
+        width: 100%;
         height:300px;
     }
     .maindiv h2{
@@ -612,6 +617,7 @@ input{
     }
     .features img{
         width: 300px;
+    
     }
     
     .description{
@@ -728,8 +734,17 @@ input{
 }
 
 @media screen and (max-width:400px){
+    .maindiv h2{
+        top:25%;
+        font-size: 18px;
+    }
+    .container3 h2{
+        font-size: 20px;
+        color: rgb(63, 56, 60);
+    }
     .newtop{
-        display:grid
+        display:grid;
+        margin-bottom: 1px;
     }
     .arrival h3{
         font-size: 23px;
@@ -739,13 +754,13 @@ input{
         justify-content: center;
         align-content: center;
         justify-content: center;
-        margin-left: px;
+        margin-top: 10px;
         gap: 5px;
         
     }
     .all{   
         margin-top: 0px;
-        height: 600px;
+        height: auto;
     }
     .footer-contact{
         margin-left: 3px;
